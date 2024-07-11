@@ -13,7 +13,7 @@
 
 MCP_CAN CAN0(5);  // Pin CS para MCP2515
 
-ThingerESP32 thing("andresf5597", "esp32", "123456");
+ThingerESP32 thing("user id ", "device id ", "password "); // colocar credenciales de thinger io
 
 void setup() {
   Serial.begin(115200);
@@ -41,7 +41,7 @@ void setup() {
   Serial.println("Tarjeta SD Inicializada con Éxito!");
 
   // Configuración de Thinger.io
-  thing.add_wifi("HUAWEI", "1234abcd");
+  thing.add_wifi("HUAWEI", "1234abcd"); // wifi ssid,password 
 
   // Crear archivo y escribir encabezados
   File dataFile = SD.open("/log.txt", FILE_WRITE);

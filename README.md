@@ -7,14 +7,30 @@ The growing number of smart cars worldwide has driven the development of new tec
 Los códigos que son presentados fueron probados de manera minuciosa en un ESP32 de 38 pines, tales códigos funcionan unicamente con la libreria CAN que se encuentra dentro del directorio.
 Los códigos permiten testear de manera individual y grupal la comunicación SPI de los módulos micro SD y MCP2515.
 
+# Asignación de pines
+
+
+| SPI  | MOSI     | MISO     | SCLK     | CS     |
+|------|----------|----------|----------|--------|
+| SD_CARD | GPIO 23  | GPIO 19  | GPIO 18  | GPIO 4 |
+| MCP2515 | GPIO 23  | GPIO 19  | GPIO 18  | GPIO 5 |
+
+![ODB2](/Terminales-de-Conector-OBDII.jpg)
+
+
+# Esquemático
+![Esquematico](/arquitectura.png)
+
+
 # DBC File example
 
 Se presenta los archivos de DATA BASE CAN (.dbc), que logran decodificar unos cuantos ID's del vehiculo KIA SOUL 2016, estos archivos son cargados en SavvyCAN.
 Una base de datos de vehiculos propietarios que pueden ser tomados como referencia se encuentra en el siguiente link, el cual descarga un pack de archivos .DBC al registrar el correo previa a su descarga.
 
-# Modelos 3D
+# Modelo 3D
 
 Se presenta un diseño 3D que contiene un esp32, un regulador de voltaje, mcp2515, módulo micro sd, conector ODB 2.
+![Logo del Proyecto](/MODELO%203D%20final/fig_3d.png)
 
 # Machine learning
 
